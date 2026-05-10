@@ -1,1 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-indie-flower: 'Indie Flower', cursive;
+  --font-inter: 'Inter', sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0d1a0d;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+.blur-style {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.04) 100%);
+  backdrop-filter: blur(40px)
+}
+
+.curvy-card {
+  clip-path: path("M 81 11 C 70 9 57 5 46 5 C 14 5 0 17 0 57 L 0 604 C 0 634 11 644 39 645 L 470 645 C 503 645 510 633 510 602 L 508 51 C 508 20 495 5 469 4 C 442 4 415 15 391 21 L 358 30 C 291 46 224 51 135 27 C 121 24 107 19 94 15");
+}
+
+.trending-curvy-card {
+  clip-path: path("M 145 13 C 118 3 113 1 92 0 C 33 0 0 30 0 108 L 0 523 C 0 605 49 645 133 645 L 373 645 C 474 645 512 609 512 518 L 513 94 C 513 34 490 0 418 0 C 396 1 379 6 357 11 L 320 20 C 271 32 217 31 169 19");
+}
+
+.review-curvy-card {
+  clip-path: path("M 144 9 C 118 3 113 1 92 0 C 33 0 0 30 0 108 L 0 370 C -1 446 48 480 122 480 L 378 480 C 478 480 510 444 510 368 L 513 94 C 513 35 484 0 418 0 C 392 1 379 6 352 10 L 320 16 C 270 24 218 25 174 15");
+}
+
+
+/* These for controlling the brackets (in trendy plants) */
+.bracket-box {
+  position: relative;
+  padding: 10px 40px;
+  color: white;
+  font-family: sans-serif;
+  display: inline-block;
+}
+
+.bracket-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  border-top: 7px solid #d0b664;
+  border-left: 7px solid #d0b664;
+  opacity: 0.7;
+  border-top-left-radius: 20px;
+}
+
+.bracket-box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  opacity: 0.7;
+  border-bottom: 7px solid #d0b664;
+  border-right: 7px solid #d0b664;
+  border-bottom-right-radius: 20px;
+}
