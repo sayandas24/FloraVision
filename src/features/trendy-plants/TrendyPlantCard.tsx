@@ -4,7 +4,7 @@ const TrendyPlantCard = ({ plant, imageReverse = true }) => {
   return (
     <div
       className={`
-        flex flex-col min-[600px]:flex-row border border-white/15 rounded-[30px] sm:rounded-[50px] md:rounded-[80px] lg:rounded-[120px] xl:rounded-[151px] h-auto min-[900px]:h-[380px]! min-[1100px]:h-[470px]! min-[1500px]:h-[526px]! w-full blur-style overflow-visible 
+        flex flex-col min-[600px]:flex-row border border-white/15 rounded-[30px] sm:rounded-[50px] md:rounded-[80px] lg:rounded-[120px] xl:rounded-[151px] h-auto min-[900px]:h-[380px]! min-[1100px]:h-[470px]! min-[1500px]:h-[526px]! w-full blur-style overflow-visible transition-all duration-500 hover:-translate-y-2 hover:border-white/30
       `}
     >
       {imageReverse ? (
@@ -69,12 +69,16 @@ const CardContent = ({ plant }: any) => {
       </p>
 
       <div className="flex flex-row gap-3 mt-2 sm:mt-4 flex-wrap">
-        <button className="text-base min-[800px]:text-[18px]! min-[1000px]:text-[22px]! min-[1200px]:text-[28px]! font-semibold rounded-[12px] p-2 sm:p-3 border-2  min-[800px]:px-10! min-[1200px]:px-14! w-fit">
+        <button className="text-base min-[800px]:text-[18px]! min-[1000px]:text-[22px]! min-[1200px]:text-[28px]! font-semibold rounded-[12px] p-2 sm:p-3 border-2 min-[800px]:px-10! min-[1200px]:px-14! w-fit transition-all duration-300 hover:bg-white hover:text-black active:scale-95 cursor-pointer">
           Explore
         </button>
 
-        <button className=" font-semibold rounded-[12px] p-2 sm:p-3 border-2 px-3 sm:px-4">
-          <img src={bag} alt="shopping bag" className="h-6 min-[800px]:h-8" />
+        <button className="font-semibold rounded-[12px] p-2 sm:p-3 border-2 px-3 sm:px-4 transition-all duration-300 hover:bg-white active:scale-95 cursor-pointer group/bag">
+          <img 
+            src={bag} 
+            alt="shopping bag" 
+            className="h-6 min-[800px]:h-8 transition-all duration-300 group-hover/bag:[filter:invert(1)]" 
+          />
         </button>
       </div>
     </>

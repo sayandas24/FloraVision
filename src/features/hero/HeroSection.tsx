@@ -1,10 +1,10 @@
-import { Play } from "lucide-react";
+import { ChevronRight, Play } from "lucide-react";
 import HeroBanner from "./HeroBanner";
 import plantImage1 from "../../assets/plants/plant-image1.png";
 import { HeroReview } from "./HeroReview";
 import { useDynamicScale } from "../../hooks/useDynamicScale";
 
-const HeroSection = () => {
+export const HeroSection = () => {
   return (
     <section className="py-6 md:py-10 lg:py-16 xl:py-20">
       <HeroBanner />
@@ -28,7 +28,6 @@ const HeroSection = () => {
     </section>
   );
 };
-export default HeroSection;
 
 const HeroText = () => {
   return (
@@ -42,10 +41,10 @@ const HeroText = () => {
       </div>
       {/* Buttons */}
       <div className="flex gap-3 sm:gap-5 items-center flex-wrap ">
-        <button className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] rounded-[12px] p-2 sm:p-3 border-2 px-6 sm:px-8 lg:px-14">
+        <button className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] rounded-[12px] p-2 sm:p-3 border-2 px-6 sm:px-8 lg:px-14 duration-300 hover:bg-white hover:text-[#1a2e1a] active:scale-95 cursor-pointer">
           Buy Now
         </button>
-        <div className="rounded-full h-full px-3 sm:px-4 gap-5 aspect-square border-3 flex justify-center items-center">
+        <div className="rounded-full h-full px-3 sm:px-4 gap-5 aspect-square border-3 flex justify-center items-center cursor-pointer transition-transform duration-300 hover:scale-110 active:scale-90">
           <Play fill="white" size={28} />
         </div>{" "}
         <span className="whitespace-nowrap text-base sm:text-lg md:text-xl lg:text-[25px] font-indie-flower">
@@ -64,7 +63,10 @@ const HeroPlant = () => {
       className="hero-card-wrapper max-[820px]:my-14! max-[600px]:my-6!"
       ref={wrapperRef}
     >
-      <section className="hero-card-inner relative w-[512px]" ref={innerRef}>
+      <section
+        className="hero-card-inner relative w-[512px] transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.01]"
+        ref={innerRef}
+      >
         <img
           className="absolute top-[-202px] left-1/2 -translate-x-1/2 w-[570px] h-[570px] z-20 pointer-events-none object-cover"
           src={plantImage1}
@@ -83,10 +85,12 @@ const HeroPlant = () => {
                 <h2 className="text-white/75 text-[38px] font-normal">
                   Aglaonema plant
                 </h2>
-                <span className="text-white/75 text-4xl">›</span>
+                <span className="text-white/75 text-4xl cursor-pointer ">
+                  <ChevronRight className="cursor-pointer hover:text-white transition-colors active:scale-90"/>
+                </span>
               </div>
             </div>
-            <button className="text-[28px] rounded-[12px] text-white/75 p-3 border-2 px-14 w-fit">
+            <button className="text-[28px] rounded-[12px] text-white/75 p-3 border-2 px-14 w-fit transition-all duration-300 hover:bg-white hover:text-black active:scale-95 cursor-pointer">
               Buy Now
             </button>
             <div className="flex items-center justify-center gap-2 mt-1">

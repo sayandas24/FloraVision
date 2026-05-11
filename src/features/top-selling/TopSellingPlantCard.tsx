@@ -14,7 +14,7 @@ export default function TopSellingPlantCard({
       className="top-selling-card-wrapper"
       ref={wrapperRef}
     >
-      <div className="top-selling-card-inner relative w-[512px]" ref={innerRef}>
+      <div className="top-selling-card-inner relative w-[512px] transition-all duration-500 hover:-translate-y-2" ref={innerRef}>
         <img
           className="absolute top-[-6rem] left-1/2 -translate-x-1/2 z-20 pointer-events-none object-cover"
           src={image}
@@ -38,8 +38,12 @@ export default function TopSellingPlantCard({
                 {price ? `Rs. ${price}/-` : "Price not available"}
               </p>
 
-              <button className=" font-normal rounded-[15px] p-3 border-white/50 border-2 px-3">
-                <img src={bag} alt="shopping bag" className="opacity-75" />
+              <button className="font-normal rounded-[15px] p-3 border-white/50 border-2 px-3 transition-all duration-300 hover:bg-white active:scale-95 cursor-pointer group/bag">
+                <img 
+                  src={bag} 
+                  alt="shopping bag" 
+                  className="opacity-75 transition-all duration-300 group-hover/bag:[filter:invert(1)] group-hover/bag:opacity-100" 
+                />
               </button>
             </div>
           </div>

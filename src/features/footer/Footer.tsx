@@ -1,6 +1,6 @@
 import flowericon from "../../assets/navicon/flowericon.png";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className=" text-white py-8 sm:py-10 lg:py-16 mt-10 sm:mt-14 lg:mt-20">
       <div className="mx-auto">
@@ -57,15 +57,15 @@ const Footer = () => {
           {/* Right Column - Newsletter */}
           <div className="space-y-4 sm:space-y-6 min-w-0 md:min-w-[35%]">
             <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-[28px] font-bold">For Every Update.</h3>
-            <form className="flex flex-col sm:flex-row gap-2">
+            <form className="flex items-center border border-white rounded-md p-1.5 focus-within:ring-1">
               <input
                 type="email"
                 placeholder="Enter Email"
-                className="flex-1 px-4 py-2 sm:py-3 bg-transparent border border-gray-400 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-white transition-colors"
+                className="flex-1 px-2 sm:px-4 py-2 bg-transparent text-white placeholder-gray-400 focus:outline-none min-w-0"
               />
               <button
                 type="submit"
-                className="px-4 sm:px-6 py-2 sm:py-3 bg-white text-[#1a2e1a] font-semibold rounded-md hover:bg-gray-100 transition-colors"
+                className="px-3 sm:px-6 py-2 sm:py-3 bg-white text-black font-bold rounded-[4px] hover:bg-gray-200 transition-colors text-xs sm:text-base tracking-tight flex-shrink-0"
               >
                 SUBSCRIBE
               </button>
@@ -94,4 +94,3 @@ const Footer = () => {
   );
 };
 
-export default Footer;

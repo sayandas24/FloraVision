@@ -1,10 +1,10 @@
-import BestOf from "./features/best-of/BestOf";
-import Footer from "./features/footer/Footer";
-import Navbar from "./features/header/Navbar";
-import HeroSection from "./features/hero/HeroSection";
-import ReviewSection from "./features/reviews/ReviewSection";
-import TopSelling from "./features/top-selling/TopSelling";
-import TrendyPlants from "./features/trendy-plants/TrendyPlants";
+import {Footer} from "./features/footer/Footer";
+import {Navbar} from "./features/header/Navbar";
+import {HeroSection} from "./features/hero/HeroSection";
+import { O2PlantsSection } from "./features/O2-section/O2PlantsSection";
+import { TestimonialSection } from "./features/testimonials/TestimonialSection";
+import {TopSelling} from "./features/top-selling/TopSelling";
+import {TrendyPlants} from "./features/trendy-plants/TrendyPlants";
 
 export default function App() {
   return (
@@ -15,8 +15,8 @@ export default function App() {
         <HeroSection />
         <TrendyPlants />
         <TopSelling />
-        <ReviewSection />
-        <BestOf />
+        <TestimonialSection />
+        <O2PlantsSection />
         <Footer />
       </div>
     </main>

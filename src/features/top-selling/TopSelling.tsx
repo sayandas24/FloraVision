@@ -1,7 +1,7 @@
 import TopSellingPlantCard from "./TopSellingPlantCard";
 import { topSellingPlants } from "../../data/plants";  
 
-const TopSelling = () => {
+export const TopSelling = () => {
   return (
     <section className="">
       <div className="my-[6rem] sm:my-[8rem] md:my-[12rem] lg:my-[16rem] xl:my-[20rem]" />
@@ -10,7 +10,7 @@ const TopSelling = () => {
         <span className="bracket-box">Our Top Selling Plants</span>
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-center gap-y-[6rem] sm:gap-y-[8rem] md:gap-y-[10rem] lg:gap-y-[12rem] xl:gap-y-[14rem] gap-x-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 place-items-center gap-y-[4rem] sm:gap-y-[8rem] md:gap-y-[10rem] lg:gap-y-[12rem] xl:gap-y-[14rem] gap-x-4">
         {topSellingPlants.map((plant) => (
           <TopSellingPlantCard
             key={plant.id}
@@ -24,5 +24,4 @@ const TopSelling = () => {
     </section>
   );
 };
-
-export default TopSelling;
+ 

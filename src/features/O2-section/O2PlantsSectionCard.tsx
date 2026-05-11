@@ -1,11 +1,11 @@
 import plant from "../../assets/plants/best-plant/best-plant1.png";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function BestOfPlantsCard() {
+export default function O2PlantsSectionCard() {
   return (
     <div
       className={`
-        flex flex-col min-[600px]:flex-row border border-white/15 rounded-[30px] sm:rounded-[50px] md:rounded-[80px] lg:rounded-[92px] h-auto min-[900px]:h-auto! min-[1100px]:h-[580px]! min-[1500px]:h-[680px]! w-full blur-style p-4 sm:p-6 md:p-8 lg:p-10 overflow-visible 
+        flex flex-col min-[600px]:flex-row border border-white/15 rounded-[30px] sm:rounded-[50px] md:rounded-[80px] lg:rounded-[92px] h-auto min-[900px]:h-auto! min-[1100px]:h-[580px]! min-[1500px]:h-[680px]! w-full blur-style p-4 sm:p-6 md:p-8 lg:p-10 overflow-visible transition-all duration-500 hover:-translate-y-2
       `}
     >
       {/* Image - on top for mobile, left for desktop */}
@@ -39,16 +39,16 @@ export default function BestOfPlantsCard() {
         <div className="flex justify-between gap-3  mt-2 sm:mt-4">
           <button
             className="text-base  border-2 min-[800px]:text-[18px]! min-[1000px]:text-[22px]! min-[1300px]:text-[28px]! font-semibold rounded-[12px] 
-             p-2 sm:p-3  px-6 min-[800px]:px-10! min-[1300px]:px-14! w-fit"
+             p-2 sm:p-3  px-6 min-[800px]:px-10! min-[1300px]:px-14! w-fit transition-all duration-300 hover:bg-white hover:text-black active:scale-95 cursor-pointer"
           >
             Explore
           </button>
           <div className="flex items-center justify-between sm:justify-start">
-            <ChevronLeft size={35} className="text-white/35" />
+            <ChevronLeft size={35} className="text-white/35 cursor-pointer hover:text-white active:scale-90" />
             <span className="text-base sm:text-lg xl:text-[20px] mx-4 sm:mx-6 lg:mx-10 font-bold">
               01/<span className="text-xs sm:text-sm xl:text-[15px]">04</span>
             </span>
-            <ChevronRight size={35} />
+            <ChevronRight size={35} className="cursor-pointer hover:text-white active:scale-90" />
           </div>
         </div>
       </div>

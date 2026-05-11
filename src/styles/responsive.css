@@ -1,46 +1,3 @@
-/* Scale bracket-box on larger screens */
-@media (min-width: 640px) {
-  .bracket-box {
-    padding: 8px 30px;
-  }
-
-  .bracket-box::before,
-  .bracket-box::after {
-    width: 50px;
-    height: 50px;
-    border-width: 5px;
-  }
-
-  .bracket-box::before {
-    border-top-left-radius: 16px;
-  }
-
-  .bracket-box::after {
-    border-bottom-right-radius: 16px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .bracket-box {
-    padding: 10px 40px;
-  }
-
-  .bracket-box::before,
-  .bracket-box::after {
-    width: 70px;
-    height: 70px;
-    border-width: 7px;
-  }
-
-  .bracket-box::before {
-    border-top-left-radius: 20px;
-  }
-
-  .bracket-box::after {
-    border-bottom-right-radius: 20px;
-  }
-}
-
 /* Hero card responsive fix */
 .hero-card-wrapper {
   width: 100%;
@@ -100,7 +57,7 @@
 /* Review card responsive fix */
 .review-card-wrapper {
   flex: 1;
-  min-width: 300px;
+  min-width: 250px;
   max-width: 512px;
   width: 100%;
   position: relative;

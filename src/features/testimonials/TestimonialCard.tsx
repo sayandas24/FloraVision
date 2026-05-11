@@ -1,13 +1,13 @@
 import { Star } from "lucide-react";
 import { useDynamicScale } from "../../hooks/useDynamicScale";
 
-export default function ReviewCard({ image, name, content }) {
+export default function TestimonialCard({ image, name, content }) {
   const { wrapperRef, innerRef } = useDynamicScale(512, 480);
 
   return (
     <div className="review-card-wrapper" ref={wrapperRef}>
       <div
-        className="review-card-inner relative w-[512px] h-[480px] blur-style review-curvy-card rounded-[45px] p-16 flex flex-col gap-10"
+        className="review-card-inner relative w-[512px] h-[480px] blur-style review-curvy-card rounded-[45px] p-12 flex flex-col gap-8"
         ref={innerRef}
         style={{
           border: "1px solid rgba(255,255,255,0.18)",
@@ -24,7 +24,7 @@ export default function ReviewCard({ image, name, content }) {
             }}
           />
           <div className="flex flex-col gap-1">
-            <span className="text-white font-semibold text-[38px]">{name}</span>
+            <span className="text-white font-semibold text-[32px]">{name}</span>
             <div className="flex items-center gap-2">
             {[1, 2, 3, 4].map((i) => (
               <Star key={i} size={16} fill="#FFD700" stroke="none" />
@@ -39,7 +39,7 @@ export default function ReviewCard({ image, name, content }) {
           </div>
         </div>
 
-        <p className="text-white/75 text-[24px] leading-tight">{content}</p>
+        <p className="text-white/75 text-[22px] leading-tight">{content}</p>
 
         {/* SVG border only */}
         <svg

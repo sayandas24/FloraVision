@@ -1,7 +1,7 @@
 import { trendyPlants } from "../../data/plants";
 import TrendyPlantCard from "./TrendyPlantCard";
 
-const TrendyPlants = () => {
+export const TrendyPlants = () => {
   return (
     <section className="w-full">
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[55px] font-semibold mb-10 sm:mb-14 md:mb-20 lg:mb-24 xl:mb-28 text-center ">
@@ -22,5 +22,4 @@ const TrendyPlants = () => {
     </section>
   );
 };
-
-export default TrendyPlants;
+ 

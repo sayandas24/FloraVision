@@ -1,6 +1,6 @@
-import BestOfPlantsCard from "./BestOfPlantsCard";
+import O2PlantsSectionCard from "./O2PlantsSectionCard";
 
-const BestOf = () => {
+export const O2PlantsSection = () => {
   return (
     <section className="px-0 min-[1200px]:px-10">
       <div className="my-[6rem] sm:my-[8rem] md:my-[12rem] lg:my-[16rem] xl:my-[20rem]" />
@@ -8,9 +8,7 @@ const BestOf = () => {
         <span className="bracket-box">Our Best o2</span>
       </h2>
 
-     <BestOfPlantsCard/>  
+      <O2PlantsSectionCard />
     </section>
   );
 };
-
-export default BestOf;

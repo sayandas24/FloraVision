@@ -1,7 +1,7 @@
 import { reviews } from "../../data/reviews";
-import ReviewCard from "./ReviewCard";
+import TestimonialCard from "./TestimonialCard";
 
-const ReviewSection = () => {
+export const TestimonialSection = () => {
   return (
     <section>
       <div className="my-[6rem] sm:my-[8rem] md:my-[12rem] lg:my-[16rem] xl:my-[20rem]" />
@@ -11,10 +11,10 @@ const ReviewSection = () => {
       </h2>
 
       {/* card */}
-      <div className="flex flex-col md:flex-row flex-wrap justify-evenly items-center gap-6 md:gap-4 lg:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-16 md:gap-y-20 lg:gap-y-24 gap-x-8 place-items-center">
         {reviews.length > 0 &&
           reviews.map((review) => (
-            <ReviewCard
+            <TestimonialCard
               key={review.id}
               name={review.name}
               content={review.comment}
@@ -25,5 +25,4 @@ const ReviewSection = () => {
     </section>
   );
 };
-
-export default ReviewSection;
+ 
