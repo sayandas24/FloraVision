@@ -8,16 +8,16 @@ import TrendyPlants from "./features/trendy-plants/TrendyPlants";
 
 export default function App() {
   return (
-    <main className="w-full min-h-screen relative">
-
-      <div className="p-20">
-        <Navbar/>
+    <main className="w-full min-h-screen relative overflow-x-hidden">
+      
+      <div className="p-6 md:p-8 lg:p-12 min-[1440px]:px-20! min-[740px]:pt-2! ">
+        <Navbar />
         <HeroSection />
-        <TrendyPlants/>
-        <TopSelling/>
-        <ReviewSection/>
-        <BestOf/>
-        <Footer/>
+        <TrendyPlants />
+        <TopSelling />
+        <ReviewSection />
+        <BestOf />
+        <Footer />
       </div>
     </main>
   );

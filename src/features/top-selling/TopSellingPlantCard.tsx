@@ -1,4 +1,5 @@
 import bag from "../../assets/icons/bag.png";
+import { useDynamicScale } from "../../hooks/useDynamicScale";
 
 export default function TopSellingPlantCard({
   image,
@@ -6,37 +7,43 @@ export default function TopSellingPlantCard({
   description,
   price,
 }) {
+  const { wrapperRef, innerRef } = useDynamicScale(512, 646);
+
   return (
-    <section className="relative w-[512px]">
-      <img
-        className="absolute top-[-6rem] left-1/2 -translate-x-1/2 z-20 pointer-events-none object-cover"
-        src={image}
-        alt={name}
-      />
+    <section 
+      className="top-selling-card-wrapper"
+      ref={wrapperRef}
+    >
+      <div className="top-selling-card-inner relative w-[512px]" ref={innerRef}>
+        <img
+          className="absolute top-[-6rem] left-1/2 -translate-x-1/2 z-20 pointer-events-none object-cover"
+          src={image}
+          alt={name}
+        />
 
-      {/* Card */}
-      <div className="relative w-[512px] trending-curvy-card h-[646px] blur-style ">
-        <div className="w-full p-16 pt-0 flex flex-col space-y-3 absolute bottom-0 left-0 right-0">
-          <p className="text-white/75 text-[38px]">{name}</p>
+        {/* Card */}
+        <div className="relative w-[513px] trending-curvy-card h-[646px] blur-style ">
+          <div className="w-full p-16 pt-0 flex flex-col space-y-3 absolute bottom-0 left-0 right-0">
+            <p className="text-white/75 text-[38px]">{name}</p>
 
-          <div className="flex items-center justify-between">
-            <h2 className="text-white/75 text-[24px] leading-tight">
-              {description}
-            </h2>
-          </div>
+            <div className="flex items-center justify-between">
+              <h2 className="text-white/75 text-[24px] leading-tight">
+                {description}
+              </h2>
+            </div>
 
-          {/* price */}
-          <div className="flex justify-between text-white/75">
-            <p className="text-[38px] font-normal ">
-              {price ? `Rs. ${price}/-` : "Price not available"}
-            </p>
+            {/* price */}
+            <div className="flex justify-between text-white/75 items-center">
+              <p className="text-[38px] font-normal ">
+                {price ? `Rs. ${price}/-` : "Price not available"}
+              </p>
 
-            <button className=" font-normal rounded-[15px] p-3 border-white/50 border-2 px-3">
-              <img src={bag} alt="shopping bag" className="opacity-75" />
-            </button>
+              <button className=" font-normal rounded-[15px] p-3 border-white/50 border-2 px-3">
+                <img src={bag} alt="shopping bag" className="opacity-75" />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
       {/* SVG border only */}
       <svg
@@ -52,6 +59,7 @@ export default function TopSellingPlantCard({
           strokeWidth="1.5"
         />
       </svg>
+      </div>
     </section>
   );
 }

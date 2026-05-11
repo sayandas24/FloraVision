@@ -2,31 +2,31 @@ import flowericon from "../../assets/navicon/flowericon.png";
 
 const Footer = () => {
   return (
-    <footer className=" text-white py-16 mt-20">
+    <footer className=" text-white py-8 sm:py-10 lg:py-16 mt-10 sm:mt-14 lg:mt-20">
       <div className="mx-auto">
         {/* Main Footer Content */}
-        <section className="flex justify-between mb-12">
-          <div className="space-y-6 max-w-[35%]">
+        <section className="flex flex-col md:flex-row justify-between mb-8 sm:mb-10 lg:mb-12 gap-8 md:gap-6">
+          <div className="space-y-4 sm:space-y-6 max-w-full md:max-w-[35%]">
             <div className="flex items-center gap-2">
-              <div className="w-24 h-24">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24">
                 <img src={flowericon} alt="FloraVision Image" />
               </div>
-              <h2 className="text-[45px] font-black opacity-75">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[45px] font-black opacity-75">
                 FloraVision.
               </h2>
             </div>
 
             {/* Description */}
-            <p className="text-[28px] font-medium ">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[28px] font-medium ">
               "From lush indoor greens to vibrant outdoor blooms, our plants are
               crafted to thrive and elevate your living environment."
             </p>
           </div>
 
           {/* Middle Column - Quick Links */}
-          <div className="space-y-6">
-            <h3 className="text-[28px] font-bold">Quick Link's</h3>
-            <nav className="flex flex-col gap-3 text-[24px] font-medium">
+          <div className="space-y-4 sm:space-y-6">
+            <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-[28px] font-bold">Quick Link's</h3>
+            <nav className="flex flex-col gap-2 sm:gap-3 text-base sm:text-lg lg:text-xl xl:text-[24px] font-medium">
               <a
                 href="#"
                 className="underline hover:text-green-400 transition-colors"
@@ -55,17 +55,17 @@ const Footer = () => {
           </div>
 
           {/* Right Column - Newsletter */}
-          <div className="space-y-6 min-w-[35%]">
-            <h3 className="text-[28px] font-bold">For Every Update.</h3>
-            <form className="flex gap-2">
+          <div className="space-y-4 sm:space-y-6 min-w-0 md:min-w-[35%]">
+            <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-[28px] font-bold">For Every Update.</h3>
+            <form className="flex flex-col sm:flex-row gap-2">
               <input
                 type="email"
                 placeholder="Enter Email"
-                className="flex-1 px-4 py-3 bg-transparent border border-gray-400 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-white transition-colors"
+                className="flex-1 px-4 py-2 sm:py-3 bg-transparent border border-gray-400 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-white transition-colors"
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-white text-[#1a2e1a] font-semibold rounded-md hover:bg-gray-100 transition-colors"
+                className="px-4 sm:px-6 py-2 sm:py-3 bg-white text-[#1a2e1a] font-semibold rounded-md hover:bg-gray-100 transition-colors"
               >
                 SUBSCRIBE
               </button>
@@ -74,8 +74,8 @@ const Footer = () => {
         </section>
 
         {/* Bottom Copyright */}
-        <section className="flex justify-between">
-          <div className="flex gap-6 text-[28px] font-extrabold w-[70%]">
+        <section className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-0">
+          <div className="flex gap-4 sm:gap-6 text-lg sm:text-xl lg:text-2xl xl:text-[28px] font-extrabold w-full sm:w-[70%]">
             <a href="#" className="hover:text-green-400 transition-colors">
               FB
             </a>
@@ -87,7 +87,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <p className="text-[24px] w-[30%]">FloraVision © all right reserve</p>
+          <p className="text-sm sm:text-base lg:text-xl xl:text-[24px] w-full sm:w-[30%]">FloraVision © all right reserve</p>
         </section>
       </div>
     </footer>

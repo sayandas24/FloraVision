@@ -1,0 +1,124 @@
+/* Scale bracket-box on larger screens */
+@media (min-width: 640px) {
+  .bracket-box {
+    padding: 8px 30px;
+  }
+
+  .bracket-box::before,
+  .bracket-box::after {
+    width: 50px;
+    height: 50px;
+    border-width: 5px;
+  }
+
+  .bracket-box::before {
+    border-top-left-radius: 16px;
+  }
+
+  .bracket-box::after {
+    border-bottom-right-radius: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bracket-box {
+    padding: 10px 40px;
+  }
+
+  .bracket-box::before,
+  .bracket-box::after {
+    width: 70px;
+    height: 70px;
+    border-width: 7px;
+  }
+
+  .bracket-box::before {
+    border-top-left-radius: 20px;
+  }
+
+  .bracket-box::after {
+    border-bottom-right-radius: 20px;
+  }
+}
+
+/* Hero card responsive fix */
+.hero-card-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.hero-card-inner {
+  transform: scale(0.55);
+  transform-origin: top left;
+}
+
+@media (min-width: 600px) {
+  .hero-card-wrapper {
+    width: 333px;
+    height: 419px;
+  }
+
+  .hero-card-inner {
+    transform: scale(0.65);
+  }
+}
+
+
+@media (min-width: 960px) {
+  .hero-card-wrapper {
+    width: 399px;
+    height: 502px;
+  }
+
+  .hero-card-inner {
+    transform: scale(0.78);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-card-wrapper {
+    width: 450px;
+    height: 567px;
+  }
+
+  .hero-card-inner {
+    transform: scale(0.88);
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-card-wrapper {
+    width: 512px;
+    height: 644px;
+  }
+
+  .hero-card-inner {
+    transform: scale(1);
+  }
+}
+
+/* Review card responsive fix */
+.review-card-wrapper {
+  flex: 1;
+  min-width: 300px;
+  max-width: 512px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.review-card-inner {
+  transform-origin: top left;
+}
+
+/* Top Selling card responsive fix */
+.top-selling-card-wrapper {
+  width: 100%;
+  max-width: 513px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.top-selling-card-inner {
+  transform-origin: top left;
+}

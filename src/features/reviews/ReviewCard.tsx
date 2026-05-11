@@ -1,26 +1,31 @@
 import { Star } from "lucide-react";
+import { useDynamicScale } from "../../hooks/useDynamicScale";
 
 export default function ReviewCard({ image, name, content }) {
+  const { wrapperRef, innerRef } = useDynamicScale(512, 480);
+
   return (
-    <div
-      className="w-[512px] blur-style h-[480px] review-curvy-card rounded-[45px] p-18 flex flex-col gap-10"
-      style={{
-        border: "1px solid rgba(255,255,255,0.18)",
-      }}
-    >
-      {/* Reviewer info */}
-      <div className="flex items-center gap-10">
-        <img
-          src={image}
-          alt={name}
-          className="w-18 h-18 rounded-full"
-          style={{
-            boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-          }}
-        />
-        <div className="flex flex-col gap-1">
-          <span className="text-white font-semibold text-[38px]">{name}</span>
-          <div className="flex items-center gap-2">
+    <div className="review-card-wrapper" ref={wrapperRef}>
+      <div
+        className="review-card-inner relative w-[512px] h-[480px] blur-style review-curvy-card rounded-[45px] p-16 flex flex-col gap-10"
+        ref={innerRef}
+        style={{
+          border: "1px solid rgba(255,255,255,0.18)",
+        }}
+      >
+        {/* Reviewer info */}
+        <div className="flex items-center gap-10">
+          <img
+            src={image}
+            alt={name}
+            className="w-[72px] h-[72px] rounded-full flex-shrink-0 object-cover"
+            style={{
+              boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+            }}
+          />
+          <div className="flex flex-col gap-1">
+            <span className="text-white font-semibold text-[38px]">{name}</span>
+            <div className="flex items-center gap-2">
             {[1, 2, 3, 4].map((i) => (
               <Star key={i} size={16} fill="#FFD700" stroke="none" />
             ))}
@@ -30,14 +35,14 @@ export default function ReviewCard({ image, name, content }) {
                 <Star size={16} fill="#FFD700" stroke="none" />
               </div>
             </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <p className="text-white/75 text-[24px] leading-tight">{content}</p>
+        <p className="text-white/75 text-[24px] leading-tight">{content}</p>
 
-      {/* SVG border only */}
-      <svg
+        {/* SVG border only */}
+        <svg
         className="absolute inset-0 w-full h-full pointer-events-none z-10"
         viewBox="0 0 512 480" 
       >
@@ -48,6 +53,7 @@ export default function ReviewCard({ image, name, content }) {
           strokeWidth="1.2"
         />
       </svg>
+      </div>
     </div>
   );
 }
