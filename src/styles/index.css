@@ -14,21 +14,32 @@ body {
 body {
   width: 100%;
   min-height: 100vh;
-  background-color: #0d1a0d;
+  background-color: #1B2316;
   color: white;
   font-family: "Inter", sans-serif;
 }
 
 .blur-style {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.04) 100%);
-  backdrop-filter: blur(40px)
+  /* background-color: #bab8b813; */
+  background: linear-gradient(145deg,
+      rgba(150, 150, 150, 0.108) 0%,
+      rgba(127, 127, 127, 0.079) 50%,
+      rgba(72, 72, 72, 0.107) 100%
+    );
+  backdrop-filter: blur(20px)
 }
 
-.curvy-card {
-  clip-path: path("M 81 11 C 70 9 57 5 46 5 C 14 5 0 17 0 57 L 0 604 C 0 634 11 644 39 645 L 470 645 C 503 645 510 633 510 602 L 508 51 C 508 20 495 5 469 4 C 442 4 415 15 391 21 L 358 30 C 291 46 224 51 135 27 C 121 24 107 19 94 15");
+.hero-curvy-card {
+  clip-path: path("M 145 13 C 128 3 120 1 105 1 C 38 0 0 37 1 110 L -1 516 C 0 627 22 644 164 644 L 342 645 C 496 644 513 626 512 512 L 512 110 C 512 36 478 0 401 0 C 372 3 366 8 352 12 C 342 16 332 21 325 23 C 290 40 205 40 167 24");
 }
 
 .trending-curvy-card {
+  /* background: linear-gradient(145deg,
+      rgba(150, 150, 150, 0.108) 0%,
+      rgba(127, 127, 127, 0.079) 50%,
+      rgba(72, 72, 72, 0.107) 100%
+    ); */
+ 
   clip-path: path("M 145 13 C 118 3 113 1 92 0 C 33 0 0 30 0 108 L 0 523 C 0 605 49 645 133 645 L 373 645 C 474 645 512 609 512 518 L 513 94 C 513 34 490 0 418 0 C 396 1 379 6 357 11 L 320 20 C 271 32 217 31 169 19");
 }
 
@@ -55,7 +66,7 @@ body {
   height: 45px;
   border-top: 7px solid #d0b664;
   border-left: 7px solid #d0b664;
-  opacity: 0.7;
+  opacity: 0.5;
   border-top-left-radius: 12px;
 }
 
@@ -66,7 +77,7 @@ body {
   right: 0;
   width: 45px;
   height: 45px;
-  opacity: 0.7;
+  opacity: 0.5;
   border-bottom: 7px solid #d0b664;
   border-right: 7px solid #d0b664;
   border-bottom-right-radius: 12px;
@@ -74,8 +85,8 @@ body {
 
 @media (max-width: 1000px) {
 
-  .bracket-box { 
-    padding: 15px 15px; 
+  .bracket-box {
+    padding: 15px 15px;
   }
 
   .bracket-box::before {

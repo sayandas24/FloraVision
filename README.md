@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# FloraVision - Frontend Developer Internship Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the project for the SoftDef Frontend Developer Internship Test. It is a clean and responsive website based on the FloraVision Figma design.
 
-Currently, two official plugins are available:
+## Live Demo
+[**View Live**](https://floravision.vercel.app/): https://floravision.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Project Goal
+Goal was to build the Figma design exactly as it looks. I made sure it works perfectly on phones, tablets, and computers. 
 
-## React Compiler
+### Key Features:
+- **Exact Design:** Matches all colors, fonts, and spacing from the Figma file.
+- **Works on All Devices:** Looks great on mobile, tablet, and desktop screens.
+- **Interactive:** Added smooth hover effects and a mobile menu.
+- **Reusable Code:** Built with clean and organized React components.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack Used
+- **Framework:** React
+- **Styling:** Tailwind CSS
+- **Language:** TypeScript
+- **Deployment:** Vercel
 
-## Expanding the ESLint configuration
+## Setup Instructions in Locally
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+To run this project locally, these are the steps:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Clone the repository
+```bash
+git clone https://github.com/sayandas24/FloraVision.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. Install packages
+Run this command to install what is needed:
+```bash
+npm install
 ```
+
+### 3. Start the project
+Run this command to start the website:
+```bash
+npm run dev
+```
+
+### 4. Open the website
+Go to [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+**Note:** 
+- The original Figma design did not include mobile screens, hover effects and interactivity. I added the responsive layouts and animations myself to make the website feel complete.
+ - used a free online tool called [https://yqnn.github.io/svg-path-editor/] to create the curvy shapes for the cards. This helped me match the Figma design perfectly without using any AI.

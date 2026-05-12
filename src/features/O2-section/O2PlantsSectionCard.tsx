@@ -13,7 +13,7 @@ export default function O2PlantsSectionCard() {
         <img
           src={plant}
           alt={"Plant image"}
-          className="absolute top-[-10rem] min-[300px]:top-[-7rem]! min-[600px]:top-[-2rem]! min-[800px]:top-[-10rem]! min-[1000px]:top-[-12rem]! min-[1100px]:top-[-13rem]! min-[1300px]:top-[-18rem]! min-[1500px]:top-[-22rem]!
+          className="absolute pointer-events-none top-[-10rem] min-[300px]:top-[-7rem]! min-[600px]:top-[-2rem]! min-[800px]:top-[-10rem]! min-[1000px]:top-[-12rem]! min-[1100px]:top-[-13rem]! min-[1300px]:top-[-18rem]! min-[1500px]:top-[-22rem]!
           left-1/2 -translate-x-1/2 z-20 
           max-w-[220px] min-[300px]:max-w-[270px]! min-[600px]:max-w-[320px]! min-[700px]:max-w-[350px]! min-[800px]:max-w-[480px]! min-[1000px]:max-w-[550px]! min-[1100px]:max-w-[650px]! min-[1300px]:max-w-[750px]! min-[1500px]:max-w-[880px]! "
         />

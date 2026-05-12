@@ -4,7 +4,7 @@ const TrendyPlantCard = ({ plant, imageReverse = true }) => {
   return (
     <div
       className={`
-        flex flex-col min-[600px]:flex-row border border-white/15 rounded-[30px] sm:rounded-[50px] md:rounded-[80px] lg:rounded-[120px] xl:rounded-[151px] h-auto min-[900px]:h-[380px]! min-[1100px]:h-[470px]! min-[1500px]:h-[526px]! w-full blur-style overflow-visible transition-all duration-500 hover:-translate-y-2 hover:border-white/30
+        flex flex-col min-[600px]:flex-row border border-white/15 rounded-[30px] sm:rounded-[50px] md:rounded-[80px] lg:rounded-[120px] xl:rounded-[151px] h-auto min-[900px]:h-[380px]! min-[1100px]:h-[470px]! min-[1500px]:h-[500px]! w-full blur-style overflow-visible transition-all duration-500 hover:-translate-y-2 hover:border-white/30
       `}
     >
       {imageReverse ? (
@@ -43,7 +43,7 @@ const PlantImage = ({ plant }) => {
     <img
       src={plant.image}
       alt={plant.title || "Plant image"}
-      className="absolute top-[-2rem] sm:top-[-12rem] min-[600px]:top-[-5rem]! min-[800px]:top-[-7rem]! min-[900px]:top-[-10rem]! min-[1500px]:top-[-16rem]!
+      className="absolute pointer-events-none top-[-2rem] sm:top-[-12rem] min-[600px]:top-[-5rem]! min-[800px]:top-[-7rem]! min-[900px]:top-[-10rem]! min-[1500px]:top-[-15rem]!
       
       left-1/2 -translate-x-1/2 z-20 max-w-[220px] sm:max-w-[280px] min-[600px]:max-w-[300px]! min-[700px]:max-w-[350px]! min-[800px]:max-w-[450px]! min-[900px]:max-w-[550px]! min-[1100px]:max-w-[650px]! min-[1500px]:max-w-none!"
     />
