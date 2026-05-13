@@ -3,7 +3,7 @@
 This is the project for the SoftDef Frontend Developer Internship Test. It is a clean and responsive website based on the FloraVision Figma design.
 
 ## Live Demo
-[**View Live**](https://floravision.vercel.app/): https://floravision.vercel.app/
+[**View Live**](https://floravision-project.vercel.app/): https://floravision.vercel.app/
 
 ## Project Goal
 Goal was to build the Figma design exactly as it looks. I made sure it works perfectly on phones, tablets, and computers. 
